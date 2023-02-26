@@ -1,31 +1,120 @@
 <html>
+  <head>
+    <title>Compose music</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="behavior.js"></script>
+  </head>
 
-<head>
-  <title>Compose music</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="behavior.js"></script>
-</head>
+  <body onload="fillTextArea()">
+    <svg width="483" height="360">
+      <rect
+        onmousedown="playNote('C4')"
+        fill="white"
+        stroke="black"
+        x="0"
+        y="0"
+        width="69"
+        height="360"
+      />
+      <rect
+        onmousedown="playNote('D4')"
+        fill="white"
+        stroke="black"
+        x="69"
+        y="0"
+        width="69"
+        height="360"
+      />
+      <rect
+        onmousedown="playNote('E4')"
+        fill="white"
+        stroke="black"
+        x="138"
+        y="0"
+        width="69"
+        height="360"
+      />
+      <rect
+        onmousedown="playNote('F4')"
+        fill="white"
+        stroke="black"
+        x="207"
+        y="0"
+        width="69"
+        height="360"
+      />
+      <rect
+        onmousedown="playNote('G4')"
+        fill="white"
+        stroke="black"
+        x="276"
+        y="0"
+        width="69"
+        height="360"
+      />
+      <rect
+        onmousedown="playNote('A4')"
+        fill="white"
+        stroke="black"
+        x="345"
+        y="0"
+        width="69"
+        height="360"
+      />
+      <rect
+        onmousedown="playNote('B4')"
+        fill="white"
+        stroke="black"
+        x="414"
+        y="0"
+        width="69"
+        height="360"
+      />
 
-<body onload="fillTextArea()">
-  <svg width="483" height="360">
-    <rect onmousedown="playNote('C4')" fill="white" stroke="black" x="0" y="0" width="69" height="360" />
-    <rect onmousedown="playNote('D4')" fill="white" stroke="black" x="69" y="0" width="69" height="360" />
-    <rect onmousedown="playNote('E4')" fill="white" stroke="black" x="138" y="0" width="69" height="360" />
-    <rect onmousedown="playNote('F4')" fill="white" stroke="black" x="207" y="0" width="69" height="360" />
-    <rect onmousedown="playNote('G4')" fill="white" stroke="black" x="276" y="0" width="69" height="360" />
-    <rect onmousedown="playNote('A4')" fill="white" stroke="black" x="345" y="0" width="69" height="360" />
-    <rect onmousedown="playNote('B4')" fill="white" stroke="black" x="414" y="0" width="69" height="360" />
-
-    <rect onmousedown="playNote('Db4')" fill="black" x="43" y="0" width="39" height="240" />
-    <rect onmousedown="playNote('Eb4')" fill="black" x="125" y="0" width="39" height="240" />
-    <rect onmousedown="playNote('Gb4')" fill="black" x="246.75" y="0" width="39" height="240" />
-    <rect onmousedown="playNote('Ab4')" fill="black" x="324.75" y="0" width="39" height="240" />
-    <rect onmousedown="playNote('Bb4')" fill="black" x="404.25" y="0" width="39" height="240" />
-  </svg>
-  <br />
-  <textarea cols="60" rows="10" id="songText"></textarea>
-  <br />
-  <button onclick="playSong()">play song</button>
-</body>
-
+      <rect
+        onmousedown="playNote('Db4')"
+        fill="black"
+        x="43"
+        y="0"
+        width="39"
+        height="240"
+      />
+      <rect
+        onmousedown="playNote('Eb4')"
+        fill="black"
+        x="125"
+        y="0"
+        width="39"
+        height="240"
+      />
+      <rect
+        onmousedown="playNote('Gb4')"
+        fill="black"
+        x="246.75"
+        y="0"
+        width="39"
+        height="240"
+      />
+      <rect
+        onmousedown="playNote('Ab4')"
+        fill="black"
+        x="324.75"
+        y="0"
+        width="39"
+        height="240"
+      />
+      <rect
+        onmousedown="playNote('Bb4')"
+        fill="black"
+        x="404.25"
+        y="0"
+        width="39"
+        height="240"
+      />
+    </svg>
+    <br />
+    <textarea cols="60" rows="10" id="songText"></textarea>
+    <br />
+    <button onclick="playSong()">play song</button>
+  </body>
 </html>
