@@ -115,4 +115,11 @@ window.addEventListener("beforeunload", () => {
 
 function onLoad() {
   fillTextArea();
+
+  const url = new URL(window.location.href);
+  const paramName = "music";
+
+  if (url.searchParams.has(paramName)) {
+    document.getElementById("songText").value = url.searchParams.get(paramName);
+  }
 }
