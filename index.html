@@ -7,110 +7,19 @@
 
   <body onload="fillTextArea()">
     <svg width="483" height="360">
-      <rect
-        onmousedown="playNote('C4')"
-        fill="white"
-        stroke="black"
-        x="0"
-        y="0"
-        width="69"
-        height="360"
-      />
-      <rect
-        onmousedown="playNote('D4')"
-        fill="white"
-        stroke="black"
-        x="69"
-        y="0"
-        width="69"
-        height="360"
-      />
-      <rect
-        onmousedown="playNote('E4')"
-        fill="white"
-        stroke="black"
-        x="138"
-        y="0"
-        width="69"
-        height="360"
-      />
-      <rect
-        onmousedown="playNote('F4')"
-        fill="white"
-        stroke="black"
-        x="207"
-        y="0"
-        width="69"
-        height="360"
-      />
-      <rect
-        onmousedown="playNote('G4')"
-        fill="white"
-        stroke="black"
-        x="276"
-        y="0"
-        width="69"
-        height="360"
-      />
-      <rect
-        onmousedown="playNote('A4')"
-        fill="white"
-        stroke="black"
-        x="345"
-        y="0"
-        width="69"
-        height="360"
-      />
-      <rect
-        onmousedown="playNote('B4')"
-        fill="white"
-        stroke="black"
-        x="414"
-        y="0"
-        width="69"
-        height="360"
-      />
+      <rect class="white-key" onmousedown="playNote('C4')" x="0" y="0" />
+      <rect class="white-key" onmousedown="playNote('D4')" x="69" y="0" />
+      <rect class="white-key" onmousedown="playNote('E4')" x="138" y="0" />
+      <rect class="white-key" onmousedown="playNote('F4')" x="207" y="0" />
+      <rect class="white-key" onmousedown="playNote('G4')" x="276" y="0" />
+      <rect class="white-key" onmousedown="playNote('A4')" x="345" y="0" />
+      <rect class="white-key" onmousedown="playNote('B4')" x="414" y="0" />
 
-      <rect
-        onmousedown="playNote('Db4')"
-        fill="black"
-        x="43"
-        y="0"
-        width="39"
-        height="240"
-      />
-      <rect
-        onmousedown="playNote('Eb4')"
-        fill="black"
-        x="125"
-        y="0"
-        width="39"
-        height="240"
-      />
-      <rect
-        onmousedown="playNote('Gb4')"
-        fill="black"
-        x="246.75"
-        y="0"
-        width="39"
-        height="240"
-      />
-      <rect
-        onmousedown="playNote('Ab4')"
-        fill="black"
-        x="324.75"
-        y="0"
-        width="39"
-        height="240"
-      />
-      <rect
-        onmousedown="playNote('Bb4')"
-        fill="black"
-        x="404.25"
-        y="0"
-        width="39"
-        height="240"
-      />
+      <rect class="black-key" onmousedown="playNote('Db4')" x="43" y="0" />
+      <rect class="black-key" onmousedown="playNote('Eb4')" x="125" y="0" />
+      <rect class="black-key" onmousedown="playNote('Gb4')" x="246.75" y="0" />
+      <rect class="black-key" onmousedown="playNote('Ab4')" x="324.75" y="0" />
+      <rect class="black-key" onmousedown="playNote('Bb4')" x="404.25" y="0" />
     </svg>
     <br />
     <textarea cols="60" rows="10" id="songText"></textarea>

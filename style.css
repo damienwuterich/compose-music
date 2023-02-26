@@ -1,11 +1,3 @@
-rect:hover {
-  fill: gray;
-}
-
-rect:active {
-  fill: blue;
-}
-
 body {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -13,4 +5,25 @@ body {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+
+rect.white-key {
+  width: 69px;
+  height: 360px;
+  fill: white;
+  stroke: black;
+}
+
+rect.black-key {
+  width: 39px;
+  height: 240px;
+  fill: black;
+}
+
+rect:hover {
+  fill: gray;
+}
+
+rect:active {
+  fill: blue;
 }
