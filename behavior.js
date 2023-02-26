@@ -69,7 +69,6 @@ async function playSong() {
   textAreaValue = textAreaValue.trim();
   textAreaValue = textAreaValue.replace(/\n/g, " ");
   textAreaValue = textAreaValue.replace(/  /g, " ");
-  console.log(textAreaValue);
 
   if (textAreaValue !== "") {
     appendUrlPath(`?music=${encodeURIComponent(textAreaValue)}`);
@@ -83,7 +82,6 @@ async function playSong() {
 
   while (spaceSplit.length > 0) {
     noteAndLength = spaceSplit.shift();
-    console.log(noteAndLength);
 
     playNote(noteAndLength[0].toUpperCase() + "4");
     await sleep(noteMsLength * noteAndLength.length);
