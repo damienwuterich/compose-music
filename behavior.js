@@ -43,7 +43,7 @@ keyToNoteMap = {
 
 document.onkeydown = function (event) {
   event = event || window.event;
-  if (event.key in keyToNoteMap) {
+  if (event.repeat === false && event.key in keyToNoteMap) {
     playNote(keyToNoteMap[event.key]);
   }
 };
