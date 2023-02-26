@@ -1,3 +1,7 @@
+:root {
+  --kb-height: 360px;
+}
+
 body {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -7,16 +11,20 @@ body {
   user-select: none;
 }
 
+svg {
+  height: var(--kb-height);
+}
+
 rect.white-key {
   width: 69px;
-  height: 360px;
+  height: var(--kb-height);
   fill: white;
   stroke: black;
 }
 
 rect.black-key {
   width: 39px;
-  height: 240px;
+  height: calc(var(--kb-height) * 2 / 3);
   fill: black;
 }
 
