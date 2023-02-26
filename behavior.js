@@ -98,3 +98,7 @@ window.addEventListener("beforeunload", () => {
     );
   }
 });
+
+function onLoad() {
+  fillTextArea();
+}
