@@ -17,7 +17,6 @@ noteToFile = {}
 
 for (noteVal in notes) {
   noteName = notes[noteVal]
-  console.log(noteName)
 
   noteToFile[noteName] = new Audio(`piano/Piano.mf.${noteName}.mp3`)
 }
