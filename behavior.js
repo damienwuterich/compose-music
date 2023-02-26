@@ -12,14 +12,14 @@ notes = [
   'Bb4',
   'B4'
 ]
-
+  
 noteToFile = {}
 
 for (noteVal in notes) {
   noteName = notes[noteVal]
   console.log(noteName)
 
-  noteToFile[noteName] = new Audio(`Piano.mf.${noteName}.mp3`)
+  noteToFile[noteName] = new Audio(`piano/Piano.mf.${noteName}.mp3`)
 }
 
 function playNote (noteName) {
