@@ -54,12 +54,26 @@ function sleep(ms) {
 
 noteMsLength = 250;
 
+function appendUrlPath(str) {
+  if (str !== "" || window.location.search !== "") {
+    window.history.replaceState(
+      {},
+      document.title,
+      window.location.pathname + str
+    );
+  }
+}
+
 async function playSong() {
   textAreaValue = document.getElementById("songText").value;
   textAreaValue = textAreaValue.trim();
   textAreaValue = textAreaValue.replace(/\n/g, " ");
   textAreaValue = textAreaValue.replace(/  /g, " ");
   console.log(textAreaValue);
+
+  if (textAreaValue !== "") {
+    appendUrlPath(`?music=${encodeURIComponent(textAreaValue)}`);
+  }
 
   // url = new URL(window.location);
   // notes = url.searchParams.get('notes');
