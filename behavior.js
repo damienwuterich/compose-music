@@ -60,9 +60,9 @@ function appendUrlPath(str) {
 }
 
 function updateTitle() {
-  document.title = `${originalDocumentTitle} - ${document
-    .getElementById("songText")
-    .value.replace(/\s+/g, " ")}`;
+  // document.title = `${originalDocumentTitle} - ${document
+  //   .getElementById("songText")
+  //   .value.replace(/\s+/g, " ")}`;
 }
 
 async function playSong() {
