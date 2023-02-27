@@ -47,8 +47,6 @@ function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
-noteMsLength = 250;
-
 function appendUrlPath(str) {
   if (str !== "" || window.location.search !== "") {
     window.history.replaceState(
@@ -68,15 +66,10 @@ async function playSong() {
     );
   }
 
-  spaceSplit = textAreaValue.split(/\s+/);
-
-  await sleep(noteMsLength);
-
-  while (spaceSplit.length > 0) {
-    noteAndLength = spaceSplit.shift();
-
-    playNote(noteAndLength[0].toUpperCase() + "4");
-    await sleep(noteMsLength * noteAndLength.length);
+  for (const noteExpr of textAreaValue.split(/\s+/)) {
+    const noteMsLength = 250;
+    playNote(noteExpr[0].toUpperCase() + "4");
+    await sleep(noteMsLength * noteExpr.length);
   }
 }
 
