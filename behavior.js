@@ -1,3 +1,5 @@
+let originalDocumentTitle = null;
+
 notes = [
   "C4",
   "Db4",
@@ -57,10 +59,17 @@ function appendUrlPath(str) {
   }
 }
 
+function updateTitle() {
+  document.title = `${originalDocumentTitle} - ${document
+    .getElementById("songText")
+    .value.replace(/\s+/g, " ")}`;
+}
+
 async function playSong() {
   const textAreaValue = document.getElementById("songText").value;
 
   if (textAreaValue !== "") {
+    updateTitle();
     appendUrlPath(
       `?music=${encodeURIComponent(textAreaValue).replace(/%20/g, "+")}`
     );
@@ -83,6 +92,7 @@ function fillTextArea() {
     ).searchParams.get("notes");
   } else {
     document.getElementById("songText").value = nullOrValue;
+    updateTitle();
   }
 }
 
@@ -97,6 +107,7 @@ window.addEventListener("beforeunload", () => {
 });
 
 function onLoad() {
+  originalDocumentTitle = document.title;
   fillTextArea();
 
   const url = new URL(window.location.href);
@@ -104,5 +115,6 @@ function onLoad() {
 
   if (url.searchParams.has(paramName)) {
     document.getElementById("songText").value = url.searchParams.get(paramName);
+    updateTitle();
   }
 }
