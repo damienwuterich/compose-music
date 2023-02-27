@@ -74,8 +74,6 @@ async function playSong() {
     appendUrlPath(`?music=${encodeURIComponent(textAreaValue)}`);
   }
 
-  // url = new URL(window.location);
-  // notes = url.searchParams.get('notes');
   spaceSplit = textAreaValue.split(" ");
 
   await sleep(noteMsLength);
