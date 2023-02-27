@@ -9,6 +9,7 @@ body {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  background: black;
 }
 
 svg {
@@ -18,7 +19,7 @@ svg {
 rect.white-key {
   width: 69px;
   height: var(--kb-height);
-  fill: white;
+  fill: lightgray;
   stroke: black;
 }
 
@@ -34,4 +35,8 @@ rect:hover {
 
 rect:active {
   fill: blue;
+}
+
+textarea#songText {
+  background: darkgray;
 }
