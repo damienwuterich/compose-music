@@ -75,7 +75,9 @@ async function playSong() {
   textAreaValue = textAreaValue.replace(/  /g, " ");
 
   if (textAreaValue !== "") {
-    appendUrlPath(`?music=${encodeURIComponent(textAreaValue)}`);
+    appendUrlPath(
+      `?music=${encodeURIComponent(textAreaValue).replace(/%20/g, "+")}`
+    );
   }
 
   spaceSplit = textAreaValue.split(" ");
