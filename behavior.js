@@ -60,10 +60,7 @@ function appendUrlPath(str) {
 }
 
 async function playSong() {
-  textAreaValue = document.getElementById("songText").value;
-  textAreaValue = textAreaValue.trim();
-  textAreaValue = textAreaValue.replace(/\n/g, " ");
-  textAreaValue = textAreaValue.replace(/  /g, " ");
+  const textAreaValue = document.getElementById("songText").value;
 
   if (textAreaValue !== "") {
     appendUrlPath(
@@ -71,7 +68,7 @@ async function playSong() {
     );
   }
 
-  spaceSplit = textAreaValue.split(" ");
+  spaceSplit = textAreaValue.split(/\s+/);
 
   await sleep(noteMsLength);
 
