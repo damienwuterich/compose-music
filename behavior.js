@@ -13,17 +13,8 @@ notes = [
   "B4",
 ];
 
-noteToFile = {};
-
-for (noteVal in notes) {
-  noteName = notes[noteVal];
-
-  noteToFile[noteName] = new Audio(`piano/Piano.mf.${noteName}.mp3`);
-}
-
 function playNote(noteName) {
-  noteToFile[noteName].currentTime = 0;
-  noteToFile[noteName].play();
+  new Audio(`piano/Piano.mf.${noteName}.mp3`).play();
 }
 
 keyToNoteMap = {
